@@ -3,152 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dan Tech | Technology Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <title>Jack's Collection</title>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f9fafb;
+    }
 
-  <link rel="stylesheet" href="style.css">
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background: #0f172a;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 620px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: #2563eb;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      color: #0f172a;
+    }
+
+    /* Services */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.7rem;
+      color: #2563eb;
+    }
+
+    /* About */
+    .about {
+      background: #e0f2fe;
+      max-width: none;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-inner p {
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    /* Contact */
+    form {
+      max-width: 550px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.9rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #38bdf8;
+      border-color: transparent;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    form button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    form button:hover {
+      background: #1d4ed8;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    footer span {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
   <header>
-    <div class="logo">JACK'S <span>COLLECTION</span></div>
-
     <nav>
-      <a href="#home">Home</a>
-      <a href="#collection">Collection</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <div class="logo">Dan Tech</div>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
+  <div class="hero">
+    <h1>Innovative Technology Solutions</h1>
+    <p>Dan Tech helps businesses and individuals grow with reliable, modern, and affordable digital solutions.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <p class="small-title">WELCOME TO</p>
-
-      <h1>JACK'S<br><span>COLLECTION</span></h1>
-
-      <p>
-        Discover premium fashion, timeless style and
-        confidence made for you.
-      </p>
-
-      <a href="#collection" class="button">SHOP COLLECTION</a>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Custom, responsive websites built to look great and perform fast on every device.</p>
+      </div>
+      <div class="card">
+        <h3>IT Support</h3>
+        <p>Reliable technical support to keep your systems running smoothly and securely.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud Solutions</h3>
+        <p>Scalable cloud infrastructure and migration services for growing businesses.</p>
+      </div>
     </div>
   </section>
 
-
-  <!-- COLLECTION -->
-  <section class="collection" id="collection">
-
-    <div class="section-title">
-      <p>OUR COLLECTION</p>
-      <h2>Latest Styles</h2>
+  <div class="about">
+    <div class="about-inner" id="about">
+      <h2>About Dan Tech</h2>
+      <p>At Dan Tech, we believe technology should make life simpler. Our team combines creativity and technical expertise to deliver solutions that are practical, secure, and built around your goals.</p>
     </div>
+  </div>
 
-    <div class="products">
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
-        <h3>Classic T-Shirt</h3>
-        <p>Premium everyday style</p>
-        <strong>K150</strong>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80">
-        <h3>Premium Jacket</h3>
-        <p>Modern luxury look</p>
-        <strong>K450</strong>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80">
-        <h3>Leather Jacket</h3>
-        <p>Bold and timeless</p>
-        <strong>K650</strong>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80">
-        <h3>Women's Fashion</h3>
-        <p>Elegant modern fashion</p>
-        <strong>K350</strong>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80">
-        <h3>Street Collection</h3>
-        <p>Urban fashion essentials</p>
-        <strong>K300</strong>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80">
-        <h3>Elegant Style</h3>
-        <p>Made to stand out</p>
-        <strong>K500</strong>
-      </div>
-
-    </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-
-    <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=80">
-    </div>
-
-    <div class="about-text">
-      <p class="small-title">ABOUT US</p>
-
-      <h2>STYLE THAT<br>MAKES A STATEMENT</h2>
-
-      <p>
-        Jack's Collection brings together modern fashion,
-        quality clothing and unique style. Our goal is to
-        help you look confident wherever you go.
-      </p>
-
-      <a href="#contact" class="button">CONTACT US</a>
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-
-    <div class="section-title">
-      <p>GET IN TOUCH</p>
-      <h2>Contact Jack's Collection</h2>
-    </div>
-
-    <div class="contact-box">
-
-      <h3>Ready to upgrade your style?</h3>
-
-      <p>Contact us for orders, prices and availability.</p>
-
-      <a href="https://wa.me/27742367909" class="whatsapp">
-        ORDER ON WHATSAPP
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
   <footer>
-    <div class="logo">JACK'S <span>COLLECTION</span></div>
-
-    <p>© 2026 Jack's Collection. All Rights Reserved.</p>
+    <p>&copy; 2026 <span>Dan Tech</span>. All rights reserved.</p>
   </footer>
 
 </body>
